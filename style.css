@@ -42,7 +42,7 @@ input.search-button:hover {
 
 .weather-app {
   display: block;
-  margin: 20px auto;
+  margin: 20px auto 5px;
   max-width: 700px;
   border: solid 1px rgba(127, 126, 126, 0.198);
   padding: 25px;
@@ -126,4 +126,13 @@ input.search-button:hover {
   text-align: center;
   font-size: 11px;
   margin: 0px;
+}
+
+.footer {
+  display: block;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 700px;
+  color: grey;
+  font-size: 11px;
 }
