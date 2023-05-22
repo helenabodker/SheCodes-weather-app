@@ -23,23 +23,11 @@ function formatDate(date) {
   return `${day}, ${hours}:${minutes}`;
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 50;
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 10;
-}
-
 function displayWeather(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector(
     "#humidity-text"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -54,6 +42,19 @@ function displayWeather(response) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+}
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 function searchCity(city) {
@@ -79,6 +80,9 @@ function getPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
+
+//Celsius temperature
+let celsiusTemperature = null;
 
 //Display current date and time
 let dateElement = document.querySelector("#date");
