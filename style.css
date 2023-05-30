@@ -19,6 +19,12 @@ input.search-button:hover {
   cursor: pointer;
 }
 
+body {
+  background-image: url("media/clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .location-button {
   display: block;
   margin: 0 auto;
@@ -41,6 +47,7 @@ input.search-button:hover {
 }
 
 .weather-app {
+  background: rgba(255, 255, 255, 0.8);
   display: block;
   margin: 20px auto 5px;
   max-width: 700px;
@@ -97,7 +104,7 @@ input.search-button:hover {
 
 .days-container {
   background: #cfe2ff;
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 30px 15px;
   border-radius: 25px;
 }
@@ -105,7 +112,7 @@ input.search-button:hover {
 .secondary-temperature {
   font-size: 20px;
   text-align: center;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .main-icon {
@@ -116,10 +123,9 @@ input.search-button:hover {
 }
 
 .secondary-icon {
-  width: 100%;
-  text-align: center;
-  color: #5397fb;
-  font-size: 24px;
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
 }
 
 .five-days {
