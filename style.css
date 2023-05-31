@@ -120,6 +120,7 @@ body {
   text-align: left;
   font-size: 85px;
   color: #5397fb;
+  filter: drop-shadow(0 0 0.6rem rgb(181, 181, 181));
 }
 
 .secondary-icon {
