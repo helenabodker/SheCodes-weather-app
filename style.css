@@ -90,18 +90,6 @@ body {
   font-weight: 400;
 }
 
-.units {
-  font-size: 15px;
-  line-height: 40px;
-  vertical-align: top;
-}
-
-#celcius-link,
-#fahrenheit-link {
-  text-decoration: none;
-  color: #5397fb;
-}
-
 .days-container {
   background: #cfe2ff;
   margin-top: 20px;
