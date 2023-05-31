@@ -90,6 +90,12 @@ body {
   font-weight: 400;
 }
 
+.unit {
+  font-size: 15px;
+  line-height: 40px;
+  vertical-align: top;
+}
+
 .days-container {
   background: #cfe2ff;
   margin-top: 20px;

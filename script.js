@@ -48,7 +48,7 @@ function displayForecast(response) {
           }@2x.png" class="secondary-icon"></img>
           <p class="secondary-temperature">${Math.round(
             forecastDay.temp.day
-          )}°C</p>
+          )}°</p>
           <p class="five-days">${formatForecastDay(forecastDay.dt)}</p>
       </div>
   `;
